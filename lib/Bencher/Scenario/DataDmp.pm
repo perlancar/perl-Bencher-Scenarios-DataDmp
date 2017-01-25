@@ -9,6 +9,9 @@ use warnings;
 
 our $scenario = {
     summary => 'Benchmark Data::Dmp',
+    modules => {
+        'Data::Dmp' => {version=>'0.21'},
+    },
     participants => [
         {name => 'Data::Dmp', fcall_template => 'Data::Dmp::dmp(<data>)'},
         {module => 'Data::Dump', code_template => 'my $dummy = Data::Dump::dump(<data>)'},
